@@ -47,13 +47,25 @@
     <div class="product">
         <img src="img1.jpg" class="img1">
         <div class="quality-container">
-            <img src="minus.png" class="counter">
-            <span class="quality">1</span>
-            <img src="plus.png" class="counter">
+            <img src="minus.png" class="counter" onclick="dec()">
+            <span class="quality" id="qualitytext">1</span>
+            <img src="plus.png" class="counter" onclick="inc()">
 
         </div>
         <button class="btn-buy-now">Buy Now</button>
     </div>
+    <script>
+        function inc(){
+            const qualityElement = document.getElementById("qualitytext");
+            let quality = parseInt(qualityElement.innerText)
+            qualityElement.innerText = ++quality;
+        }
+        function dec(){
+            const qualityElement = document.getElementById("qualitytext");
+            let quality = parseInt(qualityElement.innerText)
+            qualityElement.innerText = --quality;
+        }
+    </script>
 </body>
 
 </html>
