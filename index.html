@@ -15,7 +15,6 @@
             margin: auto;
             background-color: pink;
         }
-
         .img1 {
             height: 400px;
             width: 400px;
@@ -24,6 +23,11 @@
             margin: 20px auto;
             border-radius: 50%;
         }
+        .quality-container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
         .counter {
             height: 50px;
             width: 50px;
@@ -31,12 +35,18 @@
             display: flex;
             justify-content: space-evenly;
         }
+        #qualitytext{
+            font-size: 40px;
+        }
         .btn-buy-now{
             border: 1px solid black;
             border-radius: 30px;
             cursor: pointer;
+            height: 60px;
+            width: 200px;
             font-size: 30px;
-            margin: 20px 150px;
+            font-weight: 900;
+            margin: 20px 130px;
             padding: 10px;
             background-color: white;
         }
@@ -47,24 +57,29 @@
     <div class="product">
         <img src="img1.jpg" class="img1">
         <div class="quality-container">
-            <img src="minus.png" class="counter" onclick="dec()">
+            <img src="minus.png" class="counter" onclick="changes('dec')">
             <span class="quality" id="qualitytext">1</span>
-            <img src="plus.png" class="counter" onclick="inc()">
+            <img src="plus.png" class="counter" onclick="changes('inc')">
 
         </div>
         <button class="btn-buy-now">Buy Now</button>
     </div>
     <script>
-        function inc(){
+        function changes(action){
             const qualityElement = document.getElementById("qualitytext");
             let quality = parseInt(qualityElement.innerText)
-            qualityElement.innerText = ++quality;
+            if(quality==1 && action=='dec'){
+                alert('Quantity cannot be less than 1')
+                return
+            }
+            else if(quality==5 && action=='inc'){
+                    alert('Quantity cannot be greater than 5')
+                    return
+            }
+            qualityElement.innerText=action == 'inc' ? ++quality : --quality
+             
         }
-        function dec(){
-            const qualityElement = document.getElementById("qualitytext");
-            let quality = parseInt(qualityElement.innerText)
-            qualityElement.innerText = --quality;
-        }
+        
     </script>
 </body>
 
