@@ -1,20 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .product {
+            border: 1px solid black;
+            box-shadow: 3px 3px 10px 0px black;
+            height: 70%;
+            width: 30%;
+            border-radius: 30px;
+            margin: auto;
+            background-color: pink;
+        }
+
+        .img1 {
+            height: 400px;
+            width: 400px;
+            background-size: cover;
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+        }
+        .counter {
+            height: 50px;
+            width: 50px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .btn-buy-now{
+            border: 1px solid black;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 30px;
+            margin: 20px 150px;
+            padding: 10px;
+            background-color: white;
+        }
+    </style>
 </head>
+
 <body>
     <div class="product">
         <img src="img1.jpg" class="img1">
-        <div>
+        <div class="quality-container">
             <img src="minus.png" class="counter">
-            1
+            <span class="quality">1</span>
             <img src="plus.png" class="counter">
 
         </div>
         <button class="btn-buy-now">Buy Now</button>
     </div>
 </body>
+
 </html>
