@@ -6,14 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter Quantity</title>
     <style>
+        body{
+            height: 100vw;
+background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+
+        }
         .product {
             border: 1px solid black;
-            box-shadow: 3px 3px 10px 0px black;
-            height: 70%;
+            box-shadow: 1px 1px 10px 0px gold;
+            height: 600px;
             width: 30%;
             border-radius: 30px;
             margin: auto;
-            background-color: rgb(169, 14, 40);
+            
         }
         .img1 {
             height: 400px;
@@ -22,12 +27,14 @@
             display: block;
             margin: 20px auto;
             border-radius: 50%;
+            object-fit: cover;
+            background-color: transparent;
         }
         .quality-container{
             display: flex;
             justify-content: space-around;
             align-items: center;
-            color: white;
+            
         }
         .counter {
             height: 50px;
@@ -49,19 +56,18 @@
             font-weight: 900;
             margin: 20px 130px;
             padding: 10px;
-            color: white;
-            background-color: rgb(9, 54, 9);
+            background-color: transparent;
         }
     </style>
 </head>
 
 <body>
     <div class="product">
-        <img src="img1.jpg" class="img1">
+        <img src="sw.jpg" class="img1">
         <div class="quality-container">
-            <img src="minus.png" class="counter" onclick="changes('dec')">
+            <img src="minus (1).png" class="counter" onclick="changes('dec')">
             <span class="quality" id="qualitytext">1</span>
-            <img src="plus.png" class="counter" onclick="changes('inc')">
+            <img src="plus (2).png" class="counter" onclick="changes('inc')">
 
         </div>
         <button class="btn-buy-now">Buy Now</button>
