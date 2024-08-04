@@ -13,7 +13,7 @@ background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
         }
         .product {
             border: 1px solid black;
-            box-shadow: 1px 1px 10px 0px gold;
+            box-shadow: 1px 1px 10px 0px rgb(230, 201, 36);
             height: 600px;
             width: 30%;
             border-radius: 30px;
@@ -70,9 +70,10 @@ background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
             <img src="plus (2).png" class="counter" onclick="changes('inc')">
 
         </div>
-        <button class="btn-buy-now">Buy Now</button>
+        <button class="btn-buy-now" id="price">Rs : 150/-</button>
     </div>
     <script>
+
         function changes(action){
             const qualityElement = document.getElementById("qualitytext");
             let quality = parseInt(qualityElement.innerText)
